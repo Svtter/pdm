@@ -166,7 +166,7 @@ COPY src/ /project/src
 
 # install dependencies and project
 WORKDIR /project
-RUN pdm install --prod --no-lock --no-editable
+RUN mkdir __pypackages__ && pdm install --prod --no-lock --no-editable
 
 
 # run stage
